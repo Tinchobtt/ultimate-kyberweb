@@ -1,0 +1,14 @@
+@import './sass/root';
+@import './sass/reset';
+@import './sass/base';
+@import './components/layout/Navbar/navbar.module.scss';
+@import './components/layout/Footer/footer.module.scss';
+@import './components/pages/homeSections/Hero/hero.module.scss';
+@import './components/pages/homeSections/Services/services.module.scss';
+@import './components/pages/homeSections/Package/package.module.scss';
+@import './components/pages/homeSections/Info/info.module.scss';
+@import './components/pages/homeSections/Reviews/reviews.module.scss';
+@import './components/pages/serviceDetail/serviceDetail.module.scss';
+@import './components/pages/portfolio/portfolio.module.scss';
+@import './components/pages/contact/contact.module.scss';
+@import './components/pages/404/notFOund.module.scss';
