@@ -1,0 +1,75 @@
+#packageSection{
+    .transfer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 3rem 1rem;
+        border-radius: 30px;
+        background: linear-gradient(0deg, rgba(23,24,25,1) 0%, rgba(44,45,48,1) 100%);
+        border-bottom: 2px solid $blue;
+        //Container TransferList
+        .css-27y6a6-MuiGrid-root{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            justify-items: center;
+            gap: 2rem;
+            width: 100%;
+            margin: 0;
+            //Items
+            .css-13i4rnv-MuiGrid-root{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                .css-1i4vtki-MuiPaper-root{
+                    box-shadow: none;
+                    background-image: none;
+                    width: calc(100% - 2rem);
+                    .MuiListItemText-primary{
+                        font-size: 18px;
+                        font-family: $montserrat;
+                    }
+                }
+            }
+            //Bottones
+            .css-13i4rnv-MuiGrid-root{
+                width: 100%;
+                max-width: 300px;
+                .css-t0zib5-MuiGrid-root{
+                    flex-direction: row;
+                    justify-content: space-between; 
+                    button{
+                        min-width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px){
+    #packageSection{
+        .transfer-container{
+            display: flex;
+            justify-content: center;
+    
+            //Container TransferList
+            .css-27y6a6-MuiGrid-root{
+                width: 100%;
+                grid-template-columns: 1fr auto 1fr;
+                grid-template-rows: 1fr;
+                justify-items: center;
+                
+                //Bottones
+                .css-13i4rnv-MuiGrid-root{
+                    .css-t0zib5-MuiGrid-root{
+                        flex-direction: column;
+                        button{
+                            min-width: 64px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}

@@ -1,6 +1,7 @@
 @import './sass/root';
 @import './sass/reset';
 @import './sass/base';
+@import './sass/utilities.scss';
 @import './components/layout/Navbar/navbar.module.scss';
 @import './components/layout/Footer/footer.module.scss';
 @import './components/pages/homeSections/Hero/hero.module.scss';
@@ -12,3 +13,5 @@
 @import './components/pages/portfolio/portfolio.module.scss';
 @import './components/pages/contact/contact.module.scss';
 @import './components/pages/404/notFOund.module.scss';
+@import './components/common/serviceCard/serviceCard.module.scss';
+@import './components/common/circle/circle.module.scss';

@@ -1,0 +1,24 @@
+.circle-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        font-size: 24px;
+        font-weight: 500;
+        box-shadow:
+        0 0 0 3px #00b7ff,  /* Capa interna más brillante */
+        0 0 0 6px #009fe8,  /* Capa intermedia */ 
+        0 0 0 9px #0087d1,  /* Capa externa */
+        0 0 15px 12px rgba(0, 135, 255, 0.4);
+    }
+    .title{
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+}

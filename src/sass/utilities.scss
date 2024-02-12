@@ -1,0 +1,8 @@
+.shadow{
+    box-shadow: 0 -5px 10px #000;
+}
+.title{
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 400;
+    margin-bottom: 3rem;
+}

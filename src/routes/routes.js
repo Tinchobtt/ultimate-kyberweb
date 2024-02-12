@@ -1,4 +1,5 @@
 import Home from "../components/pages/homeSections/Home";
+import Service from "../components/pages/service/Service";
 import ServiceDetail from "../components/pages/serviceDetail/ServiceDetail";
 import Portfolio from "../components/pages/portfolio/Portfolio";
 import Contact from "../components/pages/contact/Contact";
@@ -10,7 +11,12 @@ export const routes = [
         Element: Home
     },
     {
-        id: 'Service',
+        id: 'Services',
+        path: '/services',
+        Element: Service
+    },
+    {
+        id: 'ServiceDetail',
         path: '/serviceDetail/:id',
         Element: ServiceDetail
     },

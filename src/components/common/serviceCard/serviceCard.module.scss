@@ -1,0 +1,36 @@
+.service-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 280px;
+    aspect-ratio: 9/11;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(43deg, rgba(17,19,21,1) 0%, rgba(22,31,46,1)100%);
+    border-radius: 10px;
+    .service-card-info{
+        h4{
+            display: inline-block;
+            font-size: 26px;
+            background: -webkit-linear-gradient(30deg, $red 0%, $bluesky 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 14px;
+            color: $white;
+        }
+    }
+    a{
+        display: block;
+        button{
+            width: 100%;
+            font-size: clamp(16px, 3vw, 18px);
+            font-weight: 400;
+            text-transform: inherit;
+            background-color: $blue;
+                
+        }
+    }
+}
