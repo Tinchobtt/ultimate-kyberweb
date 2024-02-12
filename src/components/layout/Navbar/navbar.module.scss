@@ -79,6 +79,7 @@ header{
                     }
                     .active{
                         color: $red;
+                        font-weight: 500;
                     }
                 }
             }
@@ -91,5 +92,49 @@ header{
     }
     .nav-open{
         transform: translateX(0%);
+    }
+    .nav-btn-contact{
+        display: none;
+    }
+}
+@media (min-width: 1024px){
+    header{
+        align-items: center;
+        .menu-icon{
+            display: none;
+        }
+        .navbar{
+            position: unset;
+            top: 0;
+            left: 0;
+            width: auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            transition: none;
+            transform: translate(0);
+            nav{
+                ul{
+                    flex-direction: row;
+                    gap: 1rem;
+                    .nav-item{
+                        padding: 0;
+                        .nav-link{
+                            font-size: 18px;
+                            font-weight: 300;
+                        }
+                        .active{
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .media-container{
+                display: none;
+            }
+        }
+        .nav-btn-contact{
+            display: block;
+        }
     }
 }

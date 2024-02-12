@@ -13,7 +13,7 @@ const ServiceCard = ({service}) => {
             variant="contained" 
             size="large"
             sx={{borderRadius: '30px'}}
-        >Details
+        >Mas detalles
         </Button>
       </HashLink>
     </div>

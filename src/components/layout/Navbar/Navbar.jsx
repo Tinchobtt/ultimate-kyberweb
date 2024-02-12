@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link'
 import Whatsapp from '../../common/icons/Whatsapp';
 import Instagram from '../../common/icons/Instagram';
 import { useLocation } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const Navbar = () => {
   const [menuWidgetOpen, setMenuWidgetOpen] = useState(false);//Estado de cambio del icono del Nav
@@ -44,6 +45,11 @@ const Navbar = () => {
           <Instagram style={{width: '2.5rem', marginLeft: '2rem'}}/>
         </div>
       </div>
+      <HashLink to={'/contact/0#start'} className='nav-btn-contact'>
+        <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px'}}>
+          Contact us
+        </Button>
+      </HashLink>
     </header>
   )
 }

@@ -34,3 +34,36 @@ footer{
         opacity: .6;
     }
 }
+@media (min-width: 768px){
+    footer{
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        .logo{
+            justify-self: start;
+        }
+        nav{
+            align-self: center;
+            ul{
+                display: flex;
+                li{
+                    font-size: 18px;
+                    margin-bottom: 0;
+                    margin-left: 1rem;
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .media-container{
+            display: flex;
+        }
+        span{
+            align-self: end;
+            justify-self: end;
+        }
+    }
+}

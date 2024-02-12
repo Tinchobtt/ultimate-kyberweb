@@ -7,19 +7,19 @@ section{
 }
 /*SCROLL BAR*/
 /* width */
-// ::-webkit-scrollbar {
-//     width: 8px;
-// } 
-// /* Track */
-// ::-webkit-scrollbar-track {
-//     background: $dark; 
-// }  
-// /* Handle */
-// ::-webkit-scrollbar-thumb {
-//     border-radius: 5px;
-//     background: $background; 
-// }
-// /* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-//     background: #2d3e5a; 
-// }
+::-webkit-scrollbar {
+    width: 8px;
+} 
+/* Track */
+::-webkit-scrollbar-track {
+    
+}  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $grey; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #303030; 
+}

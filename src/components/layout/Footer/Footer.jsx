@@ -1,7 +1,6 @@
 import { HashLink } from "react-router-hash-link"
 import logo from '../../../assets/logo/logo.png'
 import Whatsapp from "../../common/icons/Whatsapp"
-import { useLocation } from "react-router-dom"
 import Instagram from "../../common/icons/Instagram"
 
 const Footer = () => {

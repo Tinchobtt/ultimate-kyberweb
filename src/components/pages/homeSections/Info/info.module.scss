@@ -5,3 +5,13 @@
         line-height: 30px
     }
 }
+@media (min-width: 768px){
+    #infoSection{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .text{
+            grid-column: 1/4;
+            margin-top: 3rem;
+        }
+    }
+}
