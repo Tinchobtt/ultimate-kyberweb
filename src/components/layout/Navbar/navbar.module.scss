@@ -10,6 +10,7 @@ header{
     border-radius: 50px;
     padding: 10px 30px;
     box-shadow: 0 0 10px #000;
+    z-index: 10;
     .logo{
         height: 100%;
         img{
@@ -128,9 +129,6 @@ header{
                         }
                     }
                 }
-            }
-            .media-container{
-                display: none;
             }
         }
         .nav-btn-contact{

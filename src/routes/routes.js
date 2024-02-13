@@ -1,5 +1,5 @@
 import Home from "../components/pages/homeSections/Home";
-import Service from "../components/pages/service/Service";
+import Service from "../components/pages/services/Services";
 import ServiceDetail from "../components/pages/serviceDetail/ServiceDetail";
 import Portfolio from "../components/pages/portfolio/Portfolio";
 import Contact from "../components/pages/contact/Contact";

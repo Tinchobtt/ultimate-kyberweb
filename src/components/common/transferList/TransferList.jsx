@@ -62,34 +62,37 @@ export default function TransferList() {
     setRight([]);
   };
 
-  const customList = (items) => (
-    <Paper sx={{ width: 200, height: 230, overflow: 'auto', backgroundColor: 'transparent'}}>
-      <List dense component="div" role="list">
-        {items.map((value) => {
-          const labelId = `transfer-list-item-${value}-label`;
+  const customList = (items, title) => (
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <h3 style={{textAlign: 'center', fontWeight: 500, marginBottom: '2rem'}}>{title}</h3> 
+      <Paper sx={{ width: 200, height: 230, overflow: 'auto', backgroundColor: 'transparent'}}>
+        <List dense component="div" role="list">
+          {items.map((value) => {
+            const labelId = `transfer-list-item-${value}-label`;
 
-          return (
-            <ListItemButton
-              key={value}
-              role="listitem"
-              onClick={handleToggle(value)}
-            >
-              <ListItemIcon>
-                <Checkbox
-                  checked={checked.indexOf(value) !== -1}
-                  tabIndex={-1}
-                  disableRipple
-                  inputProps={{
-                    'aria-labelledby': labelId,
-                  }}
-                />
-              </ListItemIcon>
-              <ListItemText id={labelId} primary={`${value}`} />
-            </ListItemButton>
-          );
-        })}
-      </List>
-    </Paper>
+            return (
+              <ListItemButton
+                key={value}
+                role="listitem"
+                onClick={handleToggle(value)}
+              >
+                <ListItemIcon>
+                  <Checkbox
+                    checked={checked.indexOf(value) !== -1}
+                    tabIndex={-1}
+                    disableRipple
+                    inputProps={{
+                      'aria-labelledby': labelId,
+                    }}
+                  />
+                </ListItemIcon>
+                <ListItemText id={labelId} primary={`${value}`} />
+              </ListItemButton>
+            );
+          })}
+        </List>
+      </Paper>
+    </div>
   );
 
   const darkTheme = createTheme({
@@ -101,7 +104,7 @@ export default function TransferList() {
   return (
     <ThemeProvider theme={darkTheme}>
     <Grid container spacing={4} justifyContent="center" alignItems="center">
-      <Grid item>{customList(left)}</Grid>
+      <Grid item>{customList(left, 'Servicios')}</Grid>
       <Grid item>
         <Grid container direction="column" alignItems="center">
           <Button
@@ -146,7 +149,7 @@ export default function TransferList() {
           </Button>
         </Grid>
       </Grid>
-      <Grid item>{customList(right)}</Grid>
+      <Grid item>{customList(right, 'Paquete')}</Grid>
     </Grid>
     </ThemeProvider>
   );

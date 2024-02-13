@@ -5,6 +5,7 @@ import Whatsapp from '../../common/icons/Whatsapp';
 import Instagram from '../../common/icons/Instagram';
 import { useLocation } from 'react-router-dom';
 import { Button } from '@mui/material';
+import { useEffect } from 'react';
 
 const Navbar = () => {
   const [menuWidgetOpen, setMenuWidgetOpen] = useState(false);//Estado de cambio del icono del Nav
@@ -18,6 +19,19 @@ const Navbar = () => {
   };
 
   const loc = useLocation().pathname
+
+  const [resolution, setResolution] = useState(window.innerWidth);// Estado de resolucion
+  useEffect(() => {
+    const handleResize = () => {
+      setResolution(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [window.innerWidth]);
   
   return (
     <header>
@@ -37,13 +51,15 @@ const Navbar = () => {
             <li className='nav-item'><HashLink to={'/'} className={loc === '/' ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Home</HashLink></li>
             <li className='nav-item'><HashLink to={'/services'} className={loc.startsWith('/service') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Servicios</HashLink></li>
             <li className='nav-item'><HashLink to={'/portfolio'} className={loc.startsWith('/portfolio') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Portfolio</HashLink></li>
-            <li className='nav-item'><HashLink to={'/contact'} className={loc.startsWith('/contact') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Contacto</HashLink></li>
+            <li className='nav-item'><HashLink to={'/contact/0#start'} className={loc.startsWith('/contact') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Contacto</HashLink></li>
           </ul>
         </nav>
-        <div className="media-container">
-          <Whatsapp style={{width: '2.5rem'}} />
-          <Instagram style={{width: '2.5rem', marginLeft: '2rem'}}/>
-        </div>
+        {resolution < 1024 && 
+          <div className="media-container">
+            <Whatsapp style={{width: '2.5rem'}} />
+            <Instagram style={{width: '2.5rem', marginLeft: '2rem'}}/>
+          </div>
+        }
       </div>
       <HashLink to={'/contact/0#start'} className='nav-btn-contact'>
         <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px'}}>
