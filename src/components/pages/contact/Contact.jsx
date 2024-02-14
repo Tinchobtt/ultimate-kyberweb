@@ -36,7 +36,7 @@ const Contact = () => {
           })
       }, (error) => {
         Swal.fire({
-          position: 'top-end',
+          position: 'center-center',
           icon: 'error',
           title: '¡Ups!',
           text: '¡Algo salió mal!',

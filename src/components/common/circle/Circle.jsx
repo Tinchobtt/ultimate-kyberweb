@@ -10,9 +10,9 @@ const Circle = ({ title, value, symbol }) => {
         if (entry.isIntersecting) {
           const levelUp = (end) => {
             for (let i = 0; i <= end; i++) {
+              value < 5 ? setTimeout(() => setPercentage(i), i * 200) :
               value < 30 ? setTimeout(() => setPercentage(i), i * 50) :
-              value < 100 ? setTimeout(() => setPercentage(i), i * 10) : 
-              setTimeout(() => setPercentage(i), i * 2)
+              setTimeout(() => setPercentage(i), i * 10)
             }
           };
           levelUp(value);
