@@ -27,7 +27,7 @@ export const routes = [
     },
     {
         id: 'Contact',
-        path: '/contact',
+        path: '/contact/:type',
         Element: Contact
     }
 ]

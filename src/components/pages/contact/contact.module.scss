@@ -1,0 +1,92 @@
+#contact{
+    padding-top: 5rem;
+    section{
+        width: 100%;
+        max-width: $maxWidth;
+        form{
+            display: flex;
+            flex-direction: column;
+            .inputs-container{
+                display: grid;
+                grid-template-columns: 1fr;
+                .input{
+                    margin-bottom: 2rem;
+                }
+                .textarea{
+                    min-height: 100px;
+                    margin-bottom: 2rem;
+                    padding: 16.5px 14px;
+                    border-radius: 5px;
+                    color: $white;
+                    font-size: 14px;
+                    resize: none;
+                    background-color: transparent;
+                    &:hover{
+                        border: 1px solid $white;
+                    }
+                }
+            }
+            .form-bottom{
+                margin: 2rem 0;
+                .package-items{
+                    margin-bottom: 2rem;
+                    background-color: rgba($color: $white, $alpha: .8);
+                    .css-1hjwbh6-MuiSvgIcon-root{
+                        path{
+                            color: $dark;
+                        }
+                    }
+                }
+                .terms{
+                    .css-ahj2mt-MuiTypography-root{
+                        font-size: 14px;
+                    }
+                    .checkbox-label{
+                        color: $white;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    #contact{
+        section{
+            form{
+                .inputs-container{
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    margin-bottom: 2rem;
+                    .input{
+                        margin-bottom: 0;
+                    }
+                    .textarea{
+                        grid-column: 2/3;
+                        grid-row: 1/4;
+                        height: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+                .form-bottom{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-bottom: 2rem;
+                    .package-items{
+                        margin-bottom: 0;
+                        border-radius: 5px;
+                    }
+                    .terms{
+                        margin-bottom: 0;
+                        .checkbox-label{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

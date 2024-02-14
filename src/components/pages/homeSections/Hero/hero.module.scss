@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: $maxWidth;
     height: 100vh;
     background-image: url('https://res.cloudinary.com/dwyf1blmt/image/upload/v1707590310/Kyber%20Web/Hero/fingerprint.png');
     background-size: cover;

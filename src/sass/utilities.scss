@@ -1,5 +1,6 @@
 .shadow{
-    box-shadow: 0 -5px 10px #000;
+    box-shadow: 0 -5px 10px $dark,
+                0 5px 10px $dark
 }
 .title{
     font-size: clamp(24px, 4vw, 32px);

@@ -20,24 +20,26 @@ const Services = () => {
 
   return (
     <section id="servicesSection" className="shadow">
-      <h2 className="title">Discover Our Services</h2>
-      <Splide options={ {
-        width: '100vw',
-        gap   : '1rem',
-        rewind: true,
-        perPage: resolution < 768 ? 1 : resolution < 1024 ? 2 : resolution < 1440 ? 3 : 4,
-        perMove: 1
-      } }>
-        {
-          services.map(service => {
-            return (
-              <SplideSlide key={service.id}>
-                <ServiceCard  service={service}/>
-              </SplideSlide>
-            )
-          })
-        }
-      </Splide>
+      <div className="servicesSection-content">
+        <h2 className="title">Descubrí Nuestros Servicios</h2>
+        <Splide options={ {
+          width: '100vw',
+          gap   : '1rem',
+          rewind: true,
+          perPage: resolution < 768 ? 1 : resolution < 1024 ? 2 : resolution < 1440 ? 3 : 4,
+          perMove: 1
+        } }>
+          {
+            services.map(service => {
+              return (
+                <SplideSlide key={service.id}>
+                  <ServiceCard  service={service}/>
+                </SplideSlide>
+              )
+            })
+          }
+        </Splide>
+      </div>
     </section>
   )
 }

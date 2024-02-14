@@ -5,6 +5,18 @@ section{
     overflow-x: hidden;
     padding: 3rem 1rem 6rem 1rem;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+@media (min-width: 1024px){
+    section{
+        padding: 3rem 2rem 6rem 2rem;
+    }
+}
+
 /*SCROLL BAR*/
 /* width */
 ::-webkit-scrollbar {

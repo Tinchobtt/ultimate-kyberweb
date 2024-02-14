@@ -1,0 +1,12 @@
+#services{
+    margin-top: 5rem;
+    section{
+        width: 100%;
+        max-width: $maxWidth;
+        .cards-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+}

@@ -1,15 +1,21 @@
 import { Button } from "@mui/material"
 import TransferList from "../../../common/transferList/TransferList"
+import { HashLink } from "react-router-hash-link"
 
 const Package = () => {
   return (
-    <section id="packageSection" style={{display: "flex", flexDirection: 'column', alignItems: 'center'}} className="shadow">
-      <h2 className="title" style={{alignSelf: 'start'}}>Built Your Package</h2>
+    <section id="packageSection" className="">
+      <h2 className="title">Armá tu paquete</h2>
       <div className="transfer-container">
         <TransferList />
-        <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px', marginTop: '4rem'}}>
-            Get it!
-        </Button>
+        <HashLink style={{color: '#fff'}} to={'/contact/-1#start'}>
+          <Button 
+              variant="contained" 
+              size="large"
+              sx={{borderRadius: '30px', textTransform: 'unset', marginTop: '4rem'}}
+          >Conseguir
+          </Button>
+        </HashLink>
       </div>
     </section>
   )

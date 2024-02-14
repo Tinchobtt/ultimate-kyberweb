@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import { services } from '../../../lists/services';
+import { PackageContext } from '../../../context/PackageContext';
 
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
@@ -20,6 +21,8 @@ function intersection(a, b) {
 }
 
 export default function TransferList() {
+  const {packageUnit, setPackageUnit} = React.useContext(PackageContext)
+  
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState(services.map(serv => serv.name));
   const [right, setRight] = React.useState([]);
@@ -43,23 +46,27 @@ export default function TransferList() {
   const handleAllRight = () => {
     setRight(right.concat(left));
     setLeft([]);
+    setPackageUnit(right.concat(left))
   };
 
   const handleCheckedRight = () => {
     setRight(right.concat(leftChecked));
     setLeft(not(left, leftChecked));
     setChecked(not(checked, leftChecked));
+    setPackageUnit(right.concat(leftChecked))
   };
 
   const handleCheckedLeft = () => {
     setLeft(left.concat(rightChecked));
     setRight(not(right, rightChecked));
     setChecked(not(checked, rightChecked));
+    setPackageUnit(not(right, rightChecked))
   };
 
   const handleAllLeft = () => {
     setLeft(left.concat(right));
     setRight([]);
+    setPackageUnit([])
   };
 
   const customList = (items, title) => (

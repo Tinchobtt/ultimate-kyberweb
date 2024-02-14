@@ -1,3 +1,10 @@
 #servicesSection{
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .servicesSection-content{
+        width: 100%;
+        max-width: $maxWidth;
+        overflow-x: hidden;
+    }
 }

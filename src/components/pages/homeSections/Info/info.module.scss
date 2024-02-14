@@ -1,17 +1,26 @@
 #infoSection{
+    width: 100%;
     background: linear-gradient(0deg, rgba(35,39,48,1) 0%, rgba(10,10,10,1) 100%);
-    .text{
-        text-align: center;
-        line-height: 30px
+    .info-content{
+        max-width: 1200px;
+        .text{
+            margin-top: 2rem;
+            text-align: center;
+            line-height: 30px;
+        }
     }
 }
 @media (min-width: 768px){
     #infoSection{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        .text{
-            grid-column: 1/4;
-            margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        .info-content{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .text{
+                grid-column: 1/4;
+                margin-top: 3rem;
+            }
         }
     }
 }

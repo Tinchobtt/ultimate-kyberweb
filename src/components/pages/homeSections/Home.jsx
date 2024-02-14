@@ -6,7 +6,7 @@ import Reviews from "./Reviews/Reviews"
 
 const Home = () => {
   return (
-    <main>
+    <main id="home">
       <Hero />
       <Services />
       <Package />

@@ -1,0 +1,80 @@
+#serviceDetail{
+    padding: 6rem 0 4rem;
+    .portada{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-height: 300px;
+        h2{
+            display: inline;
+            font-size: clamp(28px, 8vw, 72px);
+            background: -webkit-linear-gradient(0deg, $red 0%, $bluesky 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .service-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        .label{
+            h3{
+                display: inline-block;
+                max-width: 90%;
+                height: auto;
+                padding: 1rem;
+                font-size: 16px;
+                font-weight: 300;
+                color: $white;
+                background-color: $dark;
+            }
+        }
+        .content{
+            padding: 2rem 1rem;
+            p, li{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 25px;
+                margin-bottom: 2rem;
+                color: $white;
+                list-style-type: decimal;
+                list-style-position: inside;
+            }
+        }
+    }
+}
+// @media (min-width: 768px){
+//     #serviceDetail{
+//         .portada{
+//             flex-direction: row;
+//             height: 250%;
+//             h2{
+//                 text-align: start;
+//             }
+//             img{
+//                 height: 100%;
+//                 padding: 1rem;
+//                 max-height: unset;
+//                 margin-bottom: 0;
+//             }
+//         }
+//     }
+// }
+// @media (min-width: 1024px){
+//     #serviceDetail{
+//         .portada{
+//             justify-content: space-around;
+//             height: 250px;
+//             padding: 2rem;
+//             img{
+//                 height: 100%;
+//                 padding: 0;
+//             }
+//         }
+//         .service-content{
+//             .content{
+//                 margin: 2rem;
+//             }
+//         }
+//     }
+// }

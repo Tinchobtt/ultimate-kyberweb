@@ -49,8 +49,8 @@ const Navbar = () => {
         <nav>
           <ul>
             <li className='nav-item'><HashLink to={'/'} className={loc === '/' ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Home</HashLink></li>
-            <li className='nav-item'><HashLink to={'/services'} className={loc.startsWith('/service') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Servicios</HashLink></li>
-            <li className='nav-item'><HashLink to={'/portfolio'} className={loc.startsWith('/portfolio') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Portfolio</HashLink></li>
+            <li className='nav-item'><HashLink to={'/services/#start'} className={loc.startsWith('/service') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Servicios</HashLink></li>
+            <li className='nav-item'><HashLink to={'/portfolio/#start'} className={loc.startsWith('/portfolio') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Portfolio</HashLink></li>
             <li className='nav-item'><HashLink to={'/contact/0#start'} className={loc.startsWith('/contact') ? 'nav-link active': 'nav-link'} onClick={closeMenu}>Contacto</HashLink></li>
           </ul>
         </nav>
@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
       <HashLink to={'/contact/0#start'} className='nav-btn-contact'>
         <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px'}}>
-          Contact us
+          Contactanos
         </Button>
       </HashLink>
     </header>

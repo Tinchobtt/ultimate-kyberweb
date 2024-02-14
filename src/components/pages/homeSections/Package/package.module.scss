@@ -1,9 +1,18 @@
 #packageSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: $maxWidth;
+    .title{
+        align-self: start;
+    }
     .transfer-container{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        max-width: 1000px;
         padding: 3rem 1rem;
         border-radius: 30px;
         background: linear-gradient(0deg, rgba(23,24,25,1) 0%, rgba(44,45,48,1) 100%);
