@@ -10,9 +10,7 @@ const ServiceDetail = () => {
   return (
     <main id="serviceDetail">
       <section className="portada">
-        <div>
           <h2>{service.name}</h2>
-        </div>
       </section>
       <section className="service-content">
         <div className="label">
