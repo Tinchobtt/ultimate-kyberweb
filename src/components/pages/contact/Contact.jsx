@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Button, Checkbox, FormControlLabel, MenuItem, TextField, ThemeProvider , Typography, createTheme } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useContext, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { PackageContext } from "../../../context/PackageContext"
 import { useParams } from "react-router-dom";
 import { useFormik } from "formik";
@@ -15,7 +15,7 @@ const Contact = () => {
   const { packageUnit, setPackageUnit } = useContext(PackageContext)
   const form = useRef();
   
-  const {handleSubmit, handleChange, handleBlur, touched, values, errors, isSubmitting} = useFormik({
+  const {handleSubmit, handleChange, handleBlur, touched, values, setValues, errors, isSubmitting} = useFormik({
     initialValues: {
       name: '',
       email: '',
@@ -23,12 +23,12 @@ const Contact = () => {
       message: '',
       auth: false,
       info: false,
+      package: packageUnit
     },
     onSubmit: (values, action)=>{
       emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_PUBLIC_KEY)
       .then(() => {
           Swal.fire({
-            position: 'center-center',
             icon: 'success',
             title: '¡Tu mensaje ha sido enviado exitosamente!',
             text: 'Nos pondremos en contacto contigo lo antes posible',
@@ -36,7 +36,6 @@ const Contact = () => {
           })
       }, (error) => {
         Swal.fire({
-          position: 'center-center',
           icon: 'error',
           title: '¡Ups!',
           text: '¡Algo salió mal!',
@@ -53,8 +52,9 @@ const Contact = () => {
       phone: Yup.string().matches(/^\+?[1-9]\d{1,14}$/, 'Debe ser un número de teléfono válido'),
       message: Yup.string(),
       auth: Yup.bool().required().oneOf([true], 'Campo obligatorio')
-    })
+    }),
   })
+
   const darkTheme = createTheme({
     palette: {
       mode: 'dark',
@@ -115,6 +115,7 @@ const Contact = () => {
               className="textarea"
             ></textarea>
           </div>
+          <input style={{display:'none'}} type="text" value={packageUnit} name="package" onChange={handleChange}/>
           <div className="form-bottom">
             {
               Number(type) !== 0 && (
@@ -157,7 +158,7 @@ const Contact = () => {
                 />} className="checkbox-label" label="Estoy de acuerdo en recibir actualizaciones y nuevo contenido para mantenerme informado." />
             </div>
           </div>
-          <Button type="submit" size="lg" variant="contained" disabled={isSubmitting} 
+          <Button type="submit" size="lg" variant="contained"
             sx={{
               textTransform: 'unset', 
               borderRadius: '30px',

@@ -2,10 +2,14 @@ import { useParams } from "react-router-dom"
 import { services } from "../../../lists/services"
 import { Button } from "@mui/material"
 import { HashLink } from "react-router-hash-link"
+import { PackageContext } from "../../../context/PackageContext"
+import { useContext } from "react"
 
 const ServiceDetail = () => {
   const {id} = useParams()
   let service = services.find(service => service.id === +id)
+
+  const { setPackageUnit } = useContext(PackageContext)
   
   return (
     <main id="serviceDetail">
@@ -31,7 +35,7 @@ const ServiceDetail = () => {
         </div>
         <div className="button-container" style={{display: 'flex', justifyContent: 'center'}}>
           <HashLink to={`/contact/${service.id}#start`}>
-            <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px'}}>
+            <Button variant="contained" sx={{textTransform: 'unset', borderRadius: '30px'}} onClick={ ()=> setPackageUnit(service.name) }>
               Contratar Servicio
             </Button>
           </HashLink>
