@@ -4,7 +4,7 @@ import { useContext, useEffect, useRef } from "react"
 import { PackageContext } from "../../../context/PackageContext"
 import { useParams } from "react-router-dom";
 import { useFormik } from "formik";
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 import { services } from "../../../lists/services";
 import emailjs from '@emailjs/browser';
 import Swal from "sweetalert2";
