@@ -110,12 +110,12 @@ export default function TransferList() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-    <Grid container spacing={4} justifyContent="center" alignItems="center">
+    <Grid container spacing={4} justifyContent="center" alignItems="center" direction={{xs: "column", sm: "row"}}>
       <Grid item>{customList(left, 'Servicios')}</Grid>
       <Grid item>
-        <Grid container direction="column" alignItems="center">
+        <Grid container direction={{xs: "row", sm: "column"}} alignItems="center" gap={1}>
           <Button
-            sx={{ my: 0.5 }}
+            sx={{ my: 0.5, minWidth: {xs: "50px", md: "64px"} }}
             variant="outlined"
             size="small"
             onClick={handleAllRight}
@@ -125,7 +125,7 @@ export default function TransferList() {
             ≫
           </Button>
           <Button
-            sx={{ my: 0.5 }}
+            sx={{ my: 0.5, minWidth: {xs: "50px", md: "64px"} }}
             variant="outlined"
             size="small"
             onClick={handleCheckedRight}
@@ -135,7 +135,7 @@ export default function TransferList() {
             &gt;
           </Button>
           <Button
-            sx={{ my: 0.5 }}
+            sx={{ my: 0.5, minWidth: {xs: "50px", md: "64px"} }}
             variant="outlined"
             size="small"
             onClick={handleCheckedLeft}
@@ -145,7 +145,7 @@ export default function TransferList() {
             &lt;
           </Button>
           <Button
-            sx={{ my: 0.5 }}
+            sx={{ my: 0.5, minWidth: {xs: "50px", md: "64px"} }}
             variant="outlined"
             size="small"
             onClick={handleAllLeft}

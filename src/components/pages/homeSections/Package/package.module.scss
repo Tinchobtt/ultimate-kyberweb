@@ -6,6 +6,10 @@
     max-width: $maxWidth;
     .title{
         align-self: start;
+        margin-bottom: 1rem;
+    }
+    .sub-title{
+        align-self: start;
     }
     .transfer-container{
         display: flex;
@@ -17,68 +21,5 @@
         border-radius: 30px;
         background: linear-gradient(0deg, rgba(23,24,25,1) 0%, rgba(44,45,48,1) 100%);
         border-bottom: 2px solid $blue;
-        //Container TransferList
-        .css-27y6a6-MuiGrid-root{
-            display: grid!important;
-            grid-template-columns: 1fr!important;
-            grid-template-rows: repeat(3, auto)!important;
-            justify-items: center!important;
-            gap: 2rem!important;
-            width: 100%!important;
-            margin: 0!important;
-            //Items
-            .css-13i4rnv-MuiGrid-root{
-                display: flex!important;
-                justify-content: center!important;
-                padding: 0!important;
-                .css-1i4vtki-MuiPaper-root{
-                    width: calc(100% - 2rem)!important;
-                    background-image: none!important;
-                    box-shadow: none!important;
-                    .MuiListItemText-primary{
-                        font-size: 18px!important;
-                        font-family: $montserrat!important;
-                    }
-                }
-            }
-            //Bottones
-            .css-13i4rnv-MuiGrid-root{
-                width: 100%!important;
-                max-width: 300px!important;
-                .css-t0zib5-MuiGrid-root{
-                    flex-direction: row!important;
-                    justify-content: space-between!important; 
-                    button{
-                        min-width: 50px!important;
-                    }
-                }
-            }
-        }
-    }
-}
-@media (min-width: 768px){
-    #packageSection{
-        .transfer-container{
-            display: flex;
-            justify-content: center;
-    
-            //Container TransferList
-            .css-27y6a6-MuiGrid-root{
-                width: 100%!important;
-                grid-template-columns: 1fr auto 1fr!important;
-                grid-template-rows: 1fr!important;
-                justify-items: center!important;
-                
-                //Bottones
-                .css-13i4rnv-MuiGrid-root{
-                    .css-t0zib5-MuiGrid-root{
-                        flex-direction: column!important;
-                        button{
-                            min-width: 64px!important;
-                        }
-                    }
-                }
-            }
-        } 
     }
 }

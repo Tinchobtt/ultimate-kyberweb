@@ -6,6 +6,7 @@ const Package = () => {
   return (
     <section id="packageSection" className="">
       <h2 className="title">Armá tu paquete</h2>
+      <p className="sub-title">Selecciona los servicios que necesitas para una consulta personalizada</p>
       <div className="transfer-container">
         <TransferList />
         <HashLink style={{color: '#fff'}} to={'/contact/-1#start'}>
